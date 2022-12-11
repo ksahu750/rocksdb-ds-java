@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+    id 'eclipse'
+    id 'idea'
+    id 'jacoco'
+    id 'maven-publish'
+    id 'org.ajoberstar.grgit' version '3.1.1'
+}
+
+jacoco {
+    toolVersion = "0.8.7"
+}
+
+group = 'com.github.ksahu750'
+if (project.hasProperty('appVersion')) {
+    version = "${appVersion}"
+} else {
+    version = "${version}-BRANCH-${grgit.branch.current().name}-SNAPSHOT"
+}
+
+sourceCompatibility = "17"
+targetCompatibility = "17"
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly(group: 'org.projectlombok', name: 'lombok', version: "${lombok_version}")
+    annotationProcessor(group: 'org.projectlombok', name: 'lombok', version: "${lombok_version}")
+    implementation(group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: "${jackson_version}")
+    implementation(group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: "${jackson_version}")
+    implementation("org.rocksdb:rocksdbjni:${rokcsdb_jni_version}")
+    implementation("org.slf4j:slf4j-api:2.0.5")
+    implementation("com.google.inject:guice:5.1.0")
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    test {
+        useJUnitPlatform()
+    }
+}
