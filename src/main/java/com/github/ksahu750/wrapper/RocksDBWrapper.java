@@ -1,7 +1,6 @@
-package com.github.ksahu750.provider;
+package com.github.ksahu750.wrapper;
 
 import com.github.ksahu750.util.SerializationUtils;
-import com.github.ksahu750.util.WriteBatchWrapper;
 import java.nio.charset.StandardCharsets;
 import java.util.Objects;
 import java.util.Optional;

@@ -1,7 +1,7 @@
 package com.github.ksahu750.type;
 
 import com.github.ksahu750.context.Context;
-import com.github.ksahu750.provider.RocksDBWrapper;
+import com.github.ksahu750.wrapper.RocksDBWrapper;
 import lombok.Getter;
 import lombok.ToString;
 

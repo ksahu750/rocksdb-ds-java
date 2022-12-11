@@ -1,7 +1,7 @@
 package com.github.ksahu750.type.list;
 
 import com.github.ksahu750.type.BaseRocksType;
-import com.github.ksahu750.util.WriteBatchWrapper;
+import com.github.ksahu750.wrapper.WriteBatchWrapper;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 import java.util.stream.IntStream;

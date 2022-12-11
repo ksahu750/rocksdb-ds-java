@@ -1,5 +1,6 @@
-package com.github.ksahu750.util;
+package com.github.ksahu750.wrapper;
 
+import com.github.ksahu750.util.SerializationUtils;
 import java.nio.charset.StandardCharsets;
 import org.rocksdb.RocksDBException;
 import org.rocksdb.WriteBatch;
