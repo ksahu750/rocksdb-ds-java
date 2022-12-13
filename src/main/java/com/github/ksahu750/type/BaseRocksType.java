@@ -9,10 +9,10 @@ import lombok.ToString;
 public abstract class BaseRocksType {
   public static String DELIMITER = ":";
 
-  @Getter protected DataType dataType;
+  @Getter protected Type type;
 
-  protected BaseRocksType(DataType type) {
-    this.dataType = type;
+  protected BaseRocksType(Type type) {
+    this.type = type;
   }
 
   protected BaseRocksType() {}
@@ -21,7 +21,7 @@ public abstract class BaseRocksType {
     return Context.INSTANCE.getInjector().getInstance(RocksDBWrapper.class);
   }
 
-  public enum DataType {
+  public enum Type {
     LIST,
   }
 }

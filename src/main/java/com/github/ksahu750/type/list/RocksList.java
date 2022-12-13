@@ -13,7 +13,7 @@ public class RocksList<T> extends BaseRocksType implements Iterable<T> {
   private final String name;
 
   private RocksList(String name) {
-    super(DataType.LIST);
+    super(Type.LIST);
     this.name = name;
     if (!dbWrapper().exists(name)) {
       ListMetadata metadata = new ListMetadata();
